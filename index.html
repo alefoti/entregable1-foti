@@ -17,8 +17,60 @@
     <p class="text-center">
       Este simulador permite calcular el presupuesto estimado de un viaje
       según las ciudades elegidas, cantidad de días y estilo de viaje.<br>
-     
     </p>
+
+    <form id="formularioViaje" class="bg-white p-4 rounded shadow-sm">
+
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" id="nombre" class="form-control" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" class="form-control" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="personas" class="form-label">¿Cuántas personas viajan?</label>
+        <input type="number" id="personas" class="form-control" min="1" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="edad" class="form-label">Edad del primer pasajero</label>
+        <input type="number" id="edad" class="form-control" min="1" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="estilo" class="form-label">Estilo de viaje</label>
+        <select id="estilo" class="form-select" required>
+          <option value="">Seleccioná una opción</option>
+          <option value="mochilero">Mochilero</option>
+          <option value="estandar">Estándar</option>
+          <option value="lujo">Lujo</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="dias" class="form-label">Cantidad de días</label>
+        <select id="dias" class="form-select" required>
+          <option value="">Elegí una opción</option>
+          <option value="4">4</option>
+          <option value="8">8</option>
+          <option value="11">11</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="18">18</option>
+          <option value="22">22</option>
+          <option value="26">26</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Calcular presupuesto</button>
+    </form>
+
+    <div id="resultado" class="mt-4"></div>
+  </div>
   </div>
 
   <script src="js/simulador.js"></script>
